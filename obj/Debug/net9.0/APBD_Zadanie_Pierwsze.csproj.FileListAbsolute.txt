@@ -1,0 +1,15 @@
+C:\Programming\APBD_Project_1\bin\Debug\net9.0\APBD_Zadanie_Pierwsze.exe
+C:\Programming\APBD_Project_1\bin\Debug\net9.0\APBD_Zadanie_Pierwsze.deps.json
+C:\Programming\APBD_Project_1\bin\Debug\net9.0\APBD_Zadanie_Pierwsze.runtimeconfig.json
+C:\Programming\APBD_Project_1\bin\Debug\net9.0\APBD_Zadanie_Pierwsze.dll
+C:\Programming\APBD_Project_1\bin\Debug\net9.0\APBD_Zadanie_Pierwsze.pdb
+C:\Programming\APBD_Project_1\obj\Debug\net9.0\APBD_Zadanie_Pierwsze.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programming\APBD_Project_1\obj\Debug\net9.0\APBD_Zadanie_Pierwsze.AssemblyInfoInputs.cache
+C:\Programming\APBD_Project_1\obj\Debug\net9.0\APBD_Zadanie_Pierwsze.AssemblyInfo.cs
+C:\Programming\APBD_Project_1\obj\Debug\net9.0\APBD_Zadanie_Pierwsze.csproj.CoreCompileInputs.cache
+C:\Programming\APBD_Project_1\obj\Debug\net9.0\APBD_Zadanie_Pierwsze.sourcelink.json
+C:\Programming\APBD_Project_1\obj\Debug\net9.0\APBD_Zadanie_Pierwsze.dll
+C:\Programming\APBD_Project_1\obj\Debug\net9.0\refint\APBD_Zadanie_Pierwsze.dll
+C:\Programming\APBD_Project_1\obj\Debug\net9.0\APBD_Zadanie_Pierwsze.pdb
+C:\Programming\APBD_Project_1\obj\Debug\net9.0\APBD_Zadanie_Pierwsze.genruntimeconfig.cache
+C:\Programming\APBD_Project_1\obj\Debug\net9.0\ref\APBD_Zadanie_Pierwsze.dll

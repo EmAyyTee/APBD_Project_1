@@ -1,6 +1,6 @@
 ﻿namespace APBD_Zadanie_Pierwsze.Models;
 
-public class Equipement
+public class Student
 {
     
 }

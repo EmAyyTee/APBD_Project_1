@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\s32097\\RiderProjects\\APBD_Zadanie_Pierwsze\\APBD_Zadanie_Pierwsze\\APBD_Zadanie_Pierwsze.csproj": {}
+    "C:\\Programming\\APBD_Project_1\\APBD_Zadanie_Pierwsze.csproj": {}
   },
   "projects": {
-    "C:\\Users\\s32097\\RiderProjects\\APBD_Zadanie_Pierwsze\\APBD_Zadanie_Pierwsze\\APBD_Zadanie_Pierwsze.csproj": {
+    "C:\\Programming\\APBD_Project_1\\APBD_Zadanie_Pierwsze.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\s32097\\RiderProjects\\APBD_Zadanie_Pierwsze\\APBD_Zadanie_Pierwsze\\APBD_Zadanie_Pierwsze.csproj",
+        "projectUniqueName": "C:\\Programming\\APBD_Project_1\\APBD_Zadanie_Pierwsze.csproj",
         "projectName": "APBD_Zadanie_Pierwsze",
-        "projectPath": "C:\\Users\\s32097\\RiderProjects\\APBD_Zadanie_Pierwsze\\APBD_Zadanie_Pierwsze\\APBD_Zadanie_Pierwsze.csproj",
-        "packagesPath": "C:\\Users\\s32097\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\s32097\\RiderProjects\\APBD_Zadanie_Pierwsze\\APBD_Zadanie_Pierwsze\\obj\\",
+        "projectPath": "C:\\Programming\\APBD_Project_1\\APBD_Zadanie_Pierwsze.csproj",
+        "packagesPath": "C:\\Users\\BboyM\\.nuget\\packages\\",
+        "outputPath": "C:\\Programming\\APBD_Project_1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\s32097\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\BboyM\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -65,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\BboyM\\.dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
