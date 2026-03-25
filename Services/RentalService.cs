@@ -9,6 +9,10 @@ public class RentalService
  {
   if (!CanUserRent(user))
    return new Rental();
+  
+  if (!isEquipmentAvaliable(equipment))
+   return  new Rental();
+  
   var rental = new Rental()
   {
    Renter = user,
@@ -19,6 +23,7 @@ public class RentalService
   };
   
   _rentals.Add(rental);
+  
   return rental;
  }
 
@@ -40,5 +45,10 @@ public class RentalService
  public bool CanUserRent(User user)
  {
   return GetActiveRentals(user) < user.MaxRentals;
+ }
+
+ public bool isEquipmentAvaliable(Equipement equipment)
+ {
+  return !_rentals.Any(r => r.RentedItem == equipment && r.ReturnDate == null);
  }
 }
