@@ -80,3 +80,27 @@ System umożliwia wyświetlenie:
 - aktywnych wypożyczeń,
 - przeterminowanych wypożyczeń,
 - opłat za zwroty.
+
+---
+
+## Instrukcja uruchomienia
+
+### Wymagania
+- .NET 6 lub nowszy
+
+### Kroki
+
+1. Sklonuj repozytorium
+2. Uruchom projekt: dotnet run
+3. Program uruchomi się w konsoli i wyświetli:
+- listę użytkowników,
+- listę sprzętu,
+- przebieg wypożyczeń,
+- przykłady błędnych operacji,
+- raport końcowy systemu.
+
+### Alternatywnie (Rider / Visual Studio)
+
+- Otwórz projekt
+- Ustaw projekt jako startowy
+- Kliknij **Run**
