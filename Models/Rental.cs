@@ -3,6 +3,7 @@
 public class Rental
 {
     public User Renter { get; set; }
+    public int Id { get; set; }
     public Equipement RentedItem { get; set; }
     
     public DateTime RentDate { get; set; }

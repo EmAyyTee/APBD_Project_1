@@ -4,17 +4,20 @@ namespace APBD_Zadanie_Pierwsze.Services;
 
 public class RentalService
 {
+ private int _nextId = 1;
  private List<Rental> _rentals = new List<Rental>();
+ private FeesCalculator _feesCalculator = new FeesCalculator();
  public Rental Rent(User user, Equipement equipment)
  {
   if (!CanUserRent(user))
-   return new Rental();
+  throw new InvalidOperationException("User reached rental limit");
   
   if (!isEquipmentAvaliable(equipment))
-   return  new Rental();
+   throw new InvalidOperationException("Equipment is not available");
   
   var rental = new Rental()
   {
+   Id = _nextId++,
    Renter = user,
    RentedItem = equipment,
    RentDate = DateTime.Now,
@@ -27,18 +30,17 @@ public class RentalService
   return rental;
  }
 
- public void ReturnEquipement(Rental rental)
+ public decimal ReturnEquipement(Rental rental)
  {
   rental.ReturnDate = DateTime.Now;
   rental.RentedItem.Status = EquipementStatus.Available;
+  
+  return _feesCalculator.CalculateFee(rental);
  }
 
- public List<Equipement> GetAvaliableEquipments()
+ public List<Equipement> GetAvaliableEquipments(List<Equipement> allEquipment)
  {
-  return _rentals
-   .Where(r => r.RentedItem.Status == EquipementStatus.Available)
-   .Select(r => r.RentedItem)
-   .ToList();
+  return allEquipment.Where(e => e.Status == EquipementStatus.Available).ToList();
  }
 
  public int GetActiveRentals(User user)
