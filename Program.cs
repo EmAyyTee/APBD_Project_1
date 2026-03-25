@@ -4,6 +4,14 @@ using APBD_Zadanie_Pierwsze.Services;
 
 var rentalService = new RentalService();
 var equipmentService = new EquipmentService();
+var userService = new UserService();
+
+var user = userService.AddUser(new Student()
+{
+    FirstName = "John",
+    LastName = "Doe",
+});
+
 
 var laptop = equipmentService.AddEquipment(new Laptop
 {
@@ -33,3 +41,13 @@ foreach (var equipment in availableBeforeRent)
 {
     Console.WriteLine(equipment.Name);
 }
+
+var rental = rentalService.Rent(user, laptop);
+
+Console.WriteLine($"Rented: {rental.RentedItem.Name}");
+Console.WriteLine($"User: {user.FUllName}");
+Console.WriteLine($"Max rentals: {user.MaxRentals}");
+
+var fee = rentalService.ReturnEquipment(rental);
+
+Console.WriteLine($"Rental Fee: {fee}");
