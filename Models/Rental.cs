@@ -2,12 +2,12 @@
 
 public class Rental
 {
-    public User Renter { get; private set; }
-    public Equipement RentedItemName { get; private set; }
+    public User Renter { get; set; }
+    public Equipement RentedItem { get; set; }
     
-    public DateTime RentDate { get; private set; }
-    public DateTime DueDate { get; private set; }
-    public DateTime? ReturnDate { get; private set; }
+    public DateTime RentDate { get; set; }
+    public DateTime DueDate { get; set; }
+    public DateTime? ReturnDate { get; set; }
     
     public bool IsLate => ReturnDate != null && ReturnDate > DueDate;
 }
