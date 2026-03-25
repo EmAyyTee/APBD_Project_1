@@ -8,6 +8,7 @@ public class RentalService : IRentalService
  private List<Rental> _rentals = new List<Rental>();
  private FeesCalculator _feesCalculator = new FeesCalculator();
  private LimitChecker _limitChecker = new LimitChecker();
+ 
  public Rental Rent(User user, Equipement equipment)
  {
   if (!CanUserRent(user))
@@ -27,6 +28,7 @@ public class RentalService : IRentalService
   };
   
   _rentals.Add(rental);
+  equipment.Status = EquipementStatus.Rented;
   
   return rental;
  }
