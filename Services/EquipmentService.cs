@@ -33,8 +33,8 @@ public class EquipmentService
         return _equipement.FirstOrDefault(e => e.Id == id);
     }
     
-    public List<T> GetEquipmentsByType<T>(List<Equipement> allEquipment) where T : Equipement
+    public List<T> GetEquipmentsByType<T>() where T : Equipement
     {
-        return allEquipment.OfType<T>().ToList();
+        return _equipement.OfType<T>().ToList();
     }
 }

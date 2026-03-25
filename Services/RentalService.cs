@@ -53,7 +53,7 @@ public class RentalService : IRentalService
 
  public bool isEquipmentAvaliable(Equipement equipment)
  {
-  return !_rentals.Any(r => r.RentedItem == equipment && r.ReturnDate == null);
+  return equipment.Status == EquipementStatus.Available;
  }
  
  public void MarkAsUnavailiable(Equipement equipment)
@@ -66,6 +66,13 @@ public class RentalService : IRentalService
 
  public List<Rental> GetOverdueRentals()
  {
-  return _rentals.Where(r => r.ReturnDate < DateTime.Now).ToList();
+  return _rentals.Where(r => r.ReturnDate == null && r.DueDate < DateTime.Now)
+   .ToList();
+ }
+
+ public List<Rental> GetActiveRentalsForUser(User user)
+ {
+  return _rentals.Where(r => r.Renter == user && r.ReturnDate == null)
+   .ToList();
  }
 }
