@@ -20,10 +20,35 @@ var laptop = new Laptop()
     PricePerDay = 50
 };
 
+var camera = new Camera()
+{
+    Id = 1,
+    Name = "Camera",
+    Resolution = "1920x1080",
+    Weight = 1
+};
+
+var projector = new Projector()
+{
+    Id = 1,
+    Name = "Projector",
+    Resolution = "1920x1080",
+    Brightness = 10
+};
+
 var allEquipment = new List<Equipement>()
 {
-    laptop
+    laptop,
+    camera,
+    projector
 };
+
+var avaliable = rentalService.GetAvailableEquipment(allEquipment);
+
+foreach (var equipment in avaliable)
+{
+    Console.WriteLine($"{equipment.Name}");
+}
 
 var rental = rentalService.Rent(user, laptop);
 
@@ -41,3 +66,4 @@ Console.WriteLine($"Returned. Fee: {fee}");
 
 var availableAfterReturn = rentalService.GetAvailableEquipment(allEquipment);
 Console.WriteLine($"Available after return: {availableAfterReturn.Count}");
+
