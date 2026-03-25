@@ -65,4 +65,12 @@ public class RentalService : IRentalService
  {
   return allEquipment.OfType<T>().ToList();
  }
+
+ public void MarkAsUnavailiable(Equipement equipment)
+ {
+  if (equipment.Status == EquipementStatus.Rented)
+   throw new InvalidOperationException("Cannot make rented equipment unavailable");
+  
+  equipment.Status = EquipementStatus.Unavailable;
+ }
 }
