@@ -29,12 +29,16 @@ public class RentalService
 
  public void ReturnEquipement(Rental rental)
  {
-  
+  rental.ReturnDate = DateTime.Now;
+  rental.RentedItem.Status = EquipementStatus.Available;
  }
 
  public List<Equipement> GetAvaliableEquipments()
  {
-  return new List<Equipement>();
+  return _rentals
+   .Where(r => r.RentedItem.Status == EquipementStatus.Available)
+   .Select(r => r.RentedItem)
+   .ToList();
  }
 
  public int GetActiveRentals(User user)
