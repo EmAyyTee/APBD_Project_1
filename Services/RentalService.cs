@@ -58,4 +58,9 @@ public class RentalService : IRentalService
  {
   return !_rentals.Any(r => r.RentedItem == equipment && r.ReturnDate == null);
  }
+
+ public List<T> GetEquipmentsByType<T>(List<Equipement> allEquipment) where T : Equipement
+ {
+  return allEquipment.OfType<T>().ToList();
+ }
 }

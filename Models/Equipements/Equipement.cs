@@ -1,12 +1,13 @@
 ﻿namespace APBD_Zadanie_Pierwsze.Models;
 
-public class Equipement
+public abstract class Equipement
 {
     public int Id { get; set; }
     public string Name { get; set; }
+    public decimal PricePerDay { get; set; }
     public EquipementStatus Status { get; set; }
 
-    public Equipement()
+    protected Equipement()
     {
         Status = EquipementStatus.Available;
     }
