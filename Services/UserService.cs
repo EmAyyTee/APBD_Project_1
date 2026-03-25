@@ -14,4 +14,14 @@ public class UserService
         
         return user;
     }
+
+    public List<User> GetAllUsers()
+    {
+        return _users;
+    }
+
+    public User? GetUserById(int id)
+    {
+        return _users.FirstOrDefault(u => u.Id == id);
+    }
 }
