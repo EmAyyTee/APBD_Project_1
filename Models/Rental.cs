@@ -11,4 +11,14 @@ public class Rental
     public DateTime? ReturnDate { get; set; }
     
     public bool IsLate => ReturnDate != null && ReturnDate > DueDate;
+
+    public decimal CalculateTotalPrice()
+    {
+        var endDate = ReturnDate ?? DateTime.Now;
+        var days = (endDate - RentDate).Days;
+        
+        if (days == 0) days = 1;
+        
+        return days * RentedItem.PricePerDay;
+    }
 }
