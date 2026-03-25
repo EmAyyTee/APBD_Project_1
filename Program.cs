@@ -3,7 +3,7 @@ using APBD_Zadanie_Pierwsze.Models;
 using APBD_Zadanie_Pierwsze.Services;
 
 var rentalService = new RentalService();
-var equipmentService = new EquuipmentService();
+var equipmentService = new EquipmentService();
 
 var laptop = equipmentService.AddEquipment(new Laptop
 {

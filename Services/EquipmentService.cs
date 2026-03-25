@@ -2,7 +2,7 @@
 
 namespace APBD_Zadanie_Pierwsze.Services;
 
-public class EquuipmentService
+public class EquipmentService
 {
     private int _nextId = 1;
     private List<Equipement> _equipement = new List<Equipement>();
