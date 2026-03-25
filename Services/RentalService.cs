@@ -73,4 +73,9 @@ public class RentalService : IRentalService
   
   equipment.Status = EquipementStatus.Unavailable;
  }
+
+ public List<Rental> GetOverdueRentals()
+ {
+  return _rentals.Where(r => r.ReturnDate < DateTime.Now).ToList();
+ }
 }
