@@ -41,11 +41,6 @@ public class RentalService : IRentalService
   return _feesCalculator.CalculateFee(rental);
  }
 
- public List<Equipement> GetAvailableEquipment(List<Equipement> allEquipment)
- {
-  return allEquipment.Where(e => e.Status == EquipementStatus.Available).ToList();
- }
-
  public int GetActiveRentals(User user)
  {
   return _rentals.Count(r => r.Renter ==  user && r.ReturnDate == null);
@@ -60,12 +55,7 @@ public class RentalService : IRentalService
  {
   return !_rentals.Any(r => r.RentedItem == equipment && r.ReturnDate == null);
  }
-
- public List<T> GetEquipmentsByType<T>(List<Equipement> allEquipment) where T : Equipement
- {
-  return allEquipment.OfType<T>().ToList();
- }
-
+ 
  public void MarkAsUnavailiable(Equipement equipment)
  {
   if (equipment.Status == EquipementStatus.Rented)
